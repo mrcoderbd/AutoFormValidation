@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.0.2/css/bootstrap.min.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form-validate" novalidate method="post" enctype="multipart/form-data">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" required id="name">
+            <br/>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone"  id="phone">
+            <br/>
+            <label for="email">email</label>
+            <input type="email" name='email' id="email">
+            <br/>
+            <label for="number">number</label>
+            <input type="number" name="number"   id="number">
+            <br/>
+            <!-- <div class="form-control"> -->
+
+                <label for="file">File</label><input type="file" name="file" required id="file">
+            <!-- </div> -->
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <script src="./bootstrap-5.0.2/js/bootstrap.min.js"></script>
+    <script src="./form-validation.js"></script>
+    <script>
+        document.querySelector('#form-validate').addEventListener('submit',function(event){
+            event.preventDefault();
+            console.log('All Input Values are Okay: '+formValidation(this));
+        
+        });
+    </script>
+</body>
+</html>
