@@ -5,6 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div.container{
+            width: 500px;
+            aspect-ratio: 1/1;
+            margin: auto;
+            /* position: relative; */
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #form-validate{
+           margin: 50px;
+           padding: 50px 20px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+        }
+        label{
+            font-size: 1.2rem;
+        }
+        input{
+            height: 40px;
+            outline: none;
+            font-size: 1.1rem;
+            border-color: rgba(57, 57, 57, 0.668);
+            border-radius: 5px;
+            width: 250px;
+            margin-top: 20px;
+        }
+        .form-error{
+            padding: 0;
+            margin:5px;
+            color:red;
+            font-size: 0.8rem;
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
@@ -15,10 +55,10 @@
             <label for="phone">Phone</label>
             <input type="tel" name="phone"  id="phone">
             <br/>
-            <label for="email">email</label>
+            <label for="email">Email</label>
             <input type="email" name='email' id="email">
             <br/>
-            <label for="number">number</label>
+            <label for="number">Number</label>
             <input type="number" name="number"   id="number">
             <br/>
             <!-- <div class="form-control"> -->
