@@ -9,7 +9,7 @@ function formValidation(
   let formData = new FormData(form);
   let status = [];
   for (var key of formData.keys()) {
-    var element = document.querySelector(`#form-validate input[name="${key}"]`);
+    var element = form.querySelector(`input[name="${key}"]`);
     if(element.value===''){
       if(element.hasAttribute('required')){
         status.push({
